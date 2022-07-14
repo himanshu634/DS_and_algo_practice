@@ -1,24 +1,37 @@
 package com.company;
 
+import com.company.examples.CircularLinkedList;
+import com.company.examples.DoublyLinkedList;
 import com.company.examples.LinkedList;
 
 public class Main {
 
     public static void main(String[] args) {
-        LinkedList ll = new LinkedList();
+        LinkedList ll1 = new LinkedList();
 
-        ll.insertFirst(3);
-        ll.insertFirst(4);
-        ll.insertFirst(6);
-        ll.insertFirst(54);
+        ll1.insertFirst(1);
+        ll1.insertAt(2,2);
+        ll1.insertAt(3, 3);
+        ll1.insertAt(4, 5);
+        ll1.insertRec(4, 4);
+        ll1.insertRec(6,6);
+        ll1.insertLast(10);
+        ll1.display();
+        System.out.println("This is ll1");
 
-        ll.insertLast(878);
+        LinkedList ll2 = new LinkedList();
 
-        ll.insertAt(2, 78787);
-        ll.display();
+        ll2.insertLast(1);
+        ll2.insertLast(2);
+        ll2.insertLast(7);
+        ll2.insertLast(8);
+        ll2.insertLast(9);
+        ll2.display();
         System.out.println();
-        System.out.println(ll.deleteLast());
-        System.out.println();
-        ll.display();
+
+        LinkedList ll3 = ll2.merge(ll1, ll2);
+
+        ll3.display();
+
     }
 }

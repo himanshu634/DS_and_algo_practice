@@ -10,6 +10,10 @@ public class LinkedList {
         this.size = 0;
     }
 
+    public Node getHead(){
+        return this.head;
+    }
+
     private class Node{
         private int value;
         private Node next;
@@ -59,6 +63,35 @@ public class LinkedList {
         tail = node;
 
         size++;
+    }
+
+    //reverse
+    public void reverseByRecursion(Node node){
+        if(node == tail){
+            head = tail;
+            return;
+        }
+
+        reverseByRecursion(node.next);
+        tail.next = node;
+        tail = node;
+        tail.next = null;
+    }
+
+    public void reverse(){
+        Node present = head;
+        Node next = head.next;
+        Node prev = null;
+
+        while(present != null){
+            present.next = prev;
+            prev = present;
+            present = next;
+            if(next != null){
+                next = next.next;
+            }
+        }
+        head = prev;
     }
 
     public void insertAt(int position, int value){

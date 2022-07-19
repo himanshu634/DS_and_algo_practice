@@ -19,19 +19,8 @@ public class Main {
         ll1.display();
         System.out.println("This is ll1");
 
-        LinkedList ll2 = new LinkedList();
+        ll1.reverse(ll1.getHead());
 
-        ll2.insertLast(1);
-        ll2.insertLast(2);
-        ll2.insertLast(7);
-        ll2.insertLast(8);
-        ll2.insertLast(9);
-        ll2.display();
-        System.out.println();
-
-        LinkedList ll3 = ll2.merge(ll1, ll2);
-
-        ll3.display();
-
+        ll1.display();
     }
 }

@@ -1,6 +1,6 @@
 package com.company.examples;
 
-public class CycleSolutions {
+public class ListNodeLinkedList {
     private class ListNode {
       int val;
       ListNode next;
@@ -160,6 +160,95 @@ public class CycleSolutions {
         tail.next = (first != null) ? first : second;
 
         return ans.next;
+    }
+    //    https://leetcode.com/problems/reverse-linked-list-ii/
+
+    public ListNode reverseBetween(ListNode head, int left, int right) {
+        ListNode prev = null;
+        ListNode current = head;
+        ListNode next = head.next;
+
+        if(left == right){
+            return head;
+        }
+
+        for(int i = 0; current != null && i < left - 1; i++){
+            prev = current;
+            current = next;
+            next = next.next;
+        }
+
+        ListNode first = prev;
+        ListNode last =  current;
+
+        for(int i = 0; current != null && i < (right - left) + 1; i++){
+            current.next = prev;
+            prev = current;
+            current = next;
+            if(next != null)
+                next = next.next;
+        }
+
+        if(first != null){
+            first.next = prev;
+        }else{
+            head = prev;
+        }
+
+        last.next = current;
+
+        return head;
+
+    }
+
+    // https://leetcode.com/problems/palindrome-linked-list/
+
+    public boolean isPalindrome(ListNode head) {
+        if(head == null || head.next == null){
+            return true;
+        }
+
+        ListNode slow = head;
+        ListNode fast =head;
+
+        while(fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+
+        ListNode mid = slow;
+        ListNode headSecond= reverse(mid);
+
+        while(head != null && headSecond != null){
+            if(head.val != headSecond.val){
+                break;
+            }
+            head = head.next;
+            headSecond = headSecond.next;
+        }
+
+        return head == null || headSecond == null;
+    }
+    private ListNode reverse(ListNode head){ // used for isP
+
+        if(head == null){
+            return head;
+        }
+
+        ListNode prev = null;
+        ListNode current = head;
+        ListNode next = head.next;
+
+        while(current != null){
+            current.next = prev;
+            prev = current;
+            current = next;
+            if(next != null){
+                next = next.next;
+            }
+        }
+
+        return prev;
     }
 
 }

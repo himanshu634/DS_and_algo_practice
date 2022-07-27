@@ -9,17 +9,17 @@ public class RotatedBinarySearch {
         if(arr[mid] == target){
             return mid;
         }else{
-          if(arr[start] <= arr[mid]){
-              if(arr[mid] >= target && target >= arr[start]){
-                  return search(arr, target, start, mid - 1);
-              }else{
-                  return search(arr, target, mid + 1, end);
-              }
-          }else if(target >= arr[mid] && target <= arr[end]){
-              return search(arr, target, mid + 1, end);
-          }else{
-              return search(arr, target, start, end - 1);
-          }
+            if(arr[start] <= arr[mid]){
+                if(arr[mid] >= target && target >= arr[start]){
+                    return search(arr, target, start, mid - 1);
+                }else{
+                    return search(arr, target, mid + 1, end);
+                }
+            }else if(target >= arr[mid] && target <= arr[end]){
+                return search(arr, target, mid + 1, end);
+            }else{
+                return search(arr, target, start, end - 1);
+            }
 
         }
     }

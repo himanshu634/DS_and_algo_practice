@@ -1,20 +1,22 @@
 package com.company.examples;
 
 public class ListNodeLinkedList {
-    private class ListNode {
-      int val;
-      ListNode next;
-//      ListNode(int x) {
+    private static class ListNode {
+        int val;
+        ListNode next;
+
+        //      ListNode(int x) {
 //         val = x;
 //          next = null;
 //      }
 //
-      ListNode(){}
-//      ListNode(int x, ListNode next){
-//          this.val = x;
-//          this.next = next;
-//        }
-  }
+        ListNode() {
+        }
+        ListNode(int x, ListNode next){
+            this.val = x;
+            this.next = next;
+        }
+        }
 
     //https://leetcode.com/problems/linked-list-cycle --> solution bellow
     public static boolean isCycle(ListNode head){

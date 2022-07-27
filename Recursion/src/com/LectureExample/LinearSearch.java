@@ -38,8 +38,4 @@ public class LinearSearch {
         list.addAll(fromBelowCalls);
         return list;
     }
-
-
-
-
 }

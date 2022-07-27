@@ -1,19 +1,27 @@
 import com.LectureExample.BubbleUsingRecursion;
+import com.LectureExample.MergeSort;
 import com.LectureExample.SelectionRecursion;
+import com.LectureExample.SelectionSortRecursion;
+import com.strings.Stream;
 
 import javax.swing.plaf.basic.BasicOptionPaneUI;
+import java.util.Arrays;
 
 // Lecture_Video : https://www.youtube.com/watch?v=M2uO2nMT0Bk&list=PL9gnSGHSqcnp39cTyB1dTZ2pJ04Xmdrod
 // Assignment : https://github.com/kunal-kushwaha/DSA-Bootcamp-Java/blob/main/assignments/10-recursion.md
 
 public class Main {
 
-    public static void main(String[] args){
-     SelectionRecursion sc = new SelectionRecursion();
-     int[] arr = {9,3, 4, 5, 6};
-     int[] ans = sc.selection(arr, arr.length, 0, 0);
-      for(int i : ans){
-          System.out.println(i);
-      }
+    public static void main(String[] args) {
+//        MergeSort sc = new MergeSort();
+//        int[] arr = {9,3, 4, 5, 6};
+//        int[] ans = sc.mergeSort(arr);
+//        for(int i : ans){
+//            System.out.println(i);
+//        }
+
+        Stream st = new Stream();
+        System.out.println(st.skipApple("bbbapplebbba"));
     }
 }
+

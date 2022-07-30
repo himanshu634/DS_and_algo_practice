@@ -1,8 +1,6 @@
-package com.strings;
+package com.LectureExample;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Permutations {
     public ArrayList<String> calculatePermutation(String p, String up, ArrayList<String> arr){
@@ -66,5 +64,4 @@ public class Permutations {
 
         return count;
     }
-
 }

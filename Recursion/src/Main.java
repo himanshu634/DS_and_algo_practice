@@ -3,6 +3,8 @@ import com.LectureExample.MergeSort;
 import com.LectureExample.SelectionRecursion;
 import com.LectureExample.SelectionSortRecursion;
 import com.strings.Stream;
+import com.strings.SubSet;
+import com.strings.Subseq;
 
 import javax.swing.plaf.basic.BasicOptionPaneUI;
 import java.util.Arrays;
@@ -20,8 +22,14 @@ public class Main {
 //            System.out.println(i);
 //        }
 
-        Stream st = new Stream();
-        System.out.println(st.skipApple("bbbapplebbba"));
+//        Stream st = new Stream();
+//        System.out.println(st.skipApple("bbbapplebbba"));
+
+//        Subseq sb = new Subseq();
+//        System.out.println(sb.printSubseq2("", "abc"));
+
+        SubSet subSet = new SubSet();
+        System.out.println(subSet.subsetDuplicate(new int[]{1, 2, 2}));
     }
 }
 

@@ -2,11 +2,13 @@ import com.LectureExample.BubbleUsingRecursion;
 import com.LectureExample.MergeSort;
 import com.LectureExample.SelectionRecursion;
 import com.LectureExample.SelectionSortRecursion;
+import com.strings.Permutations;
 import com.strings.Stream;
 import com.strings.SubSet;
 import com.strings.Subseq;
 
 import javax.swing.plaf.basic.BasicOptionPaneUI;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 // Lecture_Video : https://www.youtube.com/watch?v=M2uO2nMT0Bk&list=PL9gnSGHSqcnp39cTyB1dTZ2pJ04Xmdrod
@@ -28,8 +30,8 @@ public class Main {
 //        Subseq sb = new Subseq();
 //        System.out.println(sb.printSubseq2("", "abc"));
 
-        SubSet subSet = new SubSet();
-        System.out.println(subSet.subsetDuplicate(new int[]{1, 2, 2}));
+        Permutations permutations = new Permutations();
+        System.out.println(permutations.calculatePermutationList("", "abcdefghij"));
     }
 }
 

@@ -2,6 +2,7 @@
 // Assignment : https://github.com/kunal-kushwaha/DSA-Bootcamp-Java/blob/main/assignments/10-recursion.md
 
 import com.LectureExample.Dice;
+import com.backtracking.Maze;
 
 public class Main {
 
@@ -25,8 +26,19 @@ public class Main {
 //        PhonePad phonePad = new PhonePad();
 //        System.out.println(phonePad.findPermutationDigitCount("", "12"));
 
-        Dice dice = new Dice();
-        System.out.println(dice.findCombinationArrayList("",4));
+//        Dice dice = new Dice();
+//        System.out.println(dice.findCombinationArrayList("",4));
+
+        Maze maze = new Maze();
+        System.out.println(maze.countPaths(3, 3));
+//        maze.printPaths2("",3, 3);
+        boolean[][] board = {{true, true, true},
+                {true, true, true},
+                {true, true, true}};
+
+        int[][] path = new int[board.length][board[0].length];
+
+        maze.allPathPrint("", board,0, 0, path, 1);
     }
 }
 

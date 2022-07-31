@@ -31,25 +31,17 @@ public class PhonePad {
         }
 
         private int[] findRange(int number){
-            switch(number){
-                case 2:
-                    return new int[]{0, 3};
-                case 3:
-                    return new int[]{3, 6};
-                case 4:
-                    return new int[]{6, 9};
-                case 5:
-                    return new int[]{9, 12};
-                case 6:
-                    return new int[]{12, 15};
-                case 7:
-                    return new int[]{15, 19};
-                case 8:
-                    return new int[]{19, 22};
-                case 9:
-                    return new int[]{22, 26};
-            }
-            return new int[]{-1, -1};
+            return switch (number) {
+                case 2 -> new int[]{0, 3};
+                case 3 -> new int[]{3, 6};
+                case 4 -> new int[]{6, 9};
+                case 5 -> new int[]{9, 12};
+                case 6 -> new int[]{12, 15};
+                case 7 -> new int[]{15, 19};
+                case 8 -> new int[]{19, 22};
+                case 9 -> new int[]{22, 26};
+                default -> new int[]{-1, -1};
+            };
         }
 
 }

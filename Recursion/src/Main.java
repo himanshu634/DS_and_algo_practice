@@ -3,14 +3,21 @@
 
 import com.LectureExample.Dice;
 import com.backtracking.Maze;
+import com.backtracking.NQueens;
 
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        HashMap<Integer, Integer> hm = new HashMap<>();
+        NQueens nq = new NQueens();
+        boolean[][] board = new boolean[4][4];
+
+        System.out.println(nq.placeQueens(board, 0));
+
+//        HashMap<Integer, Integer> hm = new HashMap<>();
 
 //        try {
 //            int y = 10/0;

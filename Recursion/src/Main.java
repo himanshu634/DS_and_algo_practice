@@ -3,6 +3,7 @@
 
 import com.LectureExample.Dice;
 import com.backtracking.Maze;
+import com.backtracking.NKnights;
 import com.backtracking.NQueens;
 
 import java.util.Arrays;
@@ -15,7 +16,9 @@ public class Main {
         NQueens nq = new NQueens();
         boolean[][] board = new boolean[4][4];
 
-        System.out.println(nq.placeQueens(board, 0));
+//        System.out.println(nq.placeQueens(board, 0));
+        NKnights kn = new NKnights();
+        kn.setKnights(board, 0, 0, 4);
 
 //        HashMap<Integer, Integer> hm = new HashMap<>();
 

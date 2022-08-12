@@ -5,6 +5,7 @@ import com.LectureExample.Dice;
 import com.backtracking.Maze;
 import com.backtracking.NKnights;
 import com.backtracking.NQueens;
+import com.backtracking.SudokuSolver;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -13,12 +14,30 @@ public class Main {
 
     public static void main(String[] args) {
 
-        NQueens nq = new NQueens();
-        boolean[][] board = new boolean[4][4];
+        SudokuSolver ss = new SudokuSolver();
+        int[][] board = { {3, 0, 6, 5, 0, 8, 4, 0, 0},
+                {5, 2, 0, 0, 0, 0, 0, 0, 0},
+                {0, 8, 7, 0, 0, 0, 0, 3, 1},
+                {0, 0, 3, 0, 1, 0, 0, 8, 0},
+                {9, 0, 0, 8, 6, 3, 0, 0, 5},
+                {0, 5, 0, 0, 9, 0, 6, 0, 0},
+                {1, 3, 0, 0, 0, 0, 2, 5, 0},
+                {0, 0, 0, 0, 0, 0, 0, 7, 4},
+                {0, 0, 5, 2, 0, 6, 3, 0, 0} };
+        ss.solve(board);
 
-//        System.out.println(nq.placeQueens(board, 0));
-        NKnights kn = new NKnights();
-        kn.setKnights(board, 0, 0, 4);
+        if(ss.solve(board)){
+            ss.display(board);
+        }else {
+            System.out.println("cannot solve");
+        }
+
+//        NQueens nq = new NQueens();
+//        boolean[][] board = new boolean[4][4];
+//
+////        System.out.println(nq.placeQueens(board, 0));
+//        NKnights kn = new NKnights();
+//        kn.setKnights(board, 0, 0, 4);
 
 //        HashMap<Integer, Integer> hm = new HashMap<>();
 
